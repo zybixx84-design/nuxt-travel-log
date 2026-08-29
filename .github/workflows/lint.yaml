@@ -19,4 +19,8 @@ jobs:
           runtime: node@24.20.0
           cache: true
 
-      - run: pnpm lint
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
