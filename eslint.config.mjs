@@ -1,4 +1,5 @@
 import antfu from "@antfu/eslint-config";
+import eslintPluginTailwindcss from "eslint-plugin-tailwindcss";
 
 // @ts-check
 
@@ -17,6 +18,16 @@ export default antfu(
   },
 
   {
+    extends: [
+      eslintPluginTailwindcss.configs.recommended,
+    ],
+
+    settings: {
+      tailwindcss: {
+        cssConfigPath: "./app/assets/css/main.css",
+      },
+    },
+
     rules: {
       "ts/no-redeclare": "off",
       "ts/consistent-type-definitions": ["error", "type"],
