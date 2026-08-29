@@ -2,20 +2,20 @@ name: Node.js CI
 
 on:
   pull_request:
-    # Sequence of patterns matched against refs/heads
     branches:
       - main
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v6
-      - name: Use Node.js
-        uses: actions/setup-node@v7
+
+      - name: Install pnpm and Node.js
+        uses: pnpm/setup@c9883cc79df532ad1a7b81bf9ab944ceb090d65c
         with:
-          node-version: 20.x
-      - run: pnpm install
+          runtime: node@24.20.0
+          cache: true
+
       - run: pnpm lint
