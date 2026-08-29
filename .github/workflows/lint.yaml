@@ -2,7 +2,7 @@ name: Node.js CI
 
 on:
   pull_request:
-    # Sequence of patterns matched against refs/heads
+    # Sequence of patterns matched against refs/heads #
     branches:
       - main
 
