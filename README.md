@@ -35,5 +35,3 @@ Locally preview production build:
 # pnpm
 pnpm preview
 ```
-
-
