@@ -1,5 +1,8 @@
 shellEmulator: true
 
+packages:
+  - .
+
 allowBuilds:
   esbuild: false
   unrs-resolver: false
