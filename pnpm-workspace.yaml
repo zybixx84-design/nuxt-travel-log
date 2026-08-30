@@ -1,3 +1,7 @@
+minimumReleaseAgeExclude:
+  - ignore@7.0.7
+  - jsdoc-type-pratt-parser@9.2.1
+
 shellEmulator: true
 
 packages:
