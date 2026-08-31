@@ -21,9 +21,11 @@
     "db:cli": "psql -h localhost -p 5433 -U postgres -d travel_log"
   },
   "dependencies": {
+    "@better-auth/drizzle-adapter": "^1.7.2",
     "@nuxt/eslint": "1.17.0",
     "@nuxt/icon": "2.5.1",
     "@nuxtjs/color-mode": "4.0.1",
+    "better-auth": "^1.7.2",
     "concurrently": "^10.0.5",
     "drizzle-orm": "1.0.0-rc.4",
     "nuxt": "^4.5.2",

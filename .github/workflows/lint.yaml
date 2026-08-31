@@ -11,6 +11,9 @@ jobs:
     env:
       NODE_ENV: development
       NUXT_DB_URL: postgresql://postgres:postgres@localhost:5432/travel_log
+      BETTER_AUTH_SECRET: qe6WL5UetQd6K9PZgbDRaTRJ7KRpaiqMDSfAFEZ0hfs=
+      BETTER_AUTH_URL: http://localhost:3000
+
     steps:
       - uses: actions/checkout@v6
 
