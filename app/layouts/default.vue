@@ -1,5 +1,5 @@
 <template>
-  <app-nav-bar />
+  <NavBar />
   <div class="flex min-h-screen flex-col">
     <main>
       <slot />

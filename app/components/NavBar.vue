@@ -8,11 +8,8 @@
       </div>
 
       <div class="navbar-end">
-        <AppThemeToggle />
-        <button class="btn btn-accent">
-          Sign out
-          <Icon name="tabler:brand-github" size="24" />
-        </button>
+        <ThemeToggle />
+        <AuthButton />
       </div>
     </div>
   </div>

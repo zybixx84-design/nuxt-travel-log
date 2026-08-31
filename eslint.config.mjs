@@ -52,6 +52,7 @@ export default antfu(
           "README.md",
           "pnpm-workspace.yaml",
           "auth-schema.ts",
+          "^components$",
         ],
       }],
     },

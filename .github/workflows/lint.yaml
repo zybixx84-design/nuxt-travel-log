@@ -13,6 +13,8 @@ jobs:
       NUXT_DB_URL: postgresql://postgres:postgres@localhost:5432/travel_log
       BETTER_AUTH_SECRET: qe6WL5UetQd6K9PZgbDRaTRJ7KRpaiqMDSfAFEZ0hfs=
       BETTER_AUTH_URL: http://localhost:3000
+      GITHUB_CLIENT_ID: Ov23li4b32WVhSx4j7zq
+      GITHUB_CLIENT_SECRET: dd15f7e99e669b924971878325c8346757186afc
 
     steps:
       - uses: actions/checkout@v6

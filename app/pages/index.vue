@@ -8,9 +8,7 @@
         <p class="py-6">
           Travel log is a simple app to keep track of your travels. You can add new trips, view your past trips, and see a map of where you've been.
         </p>
-        <button class="btn btn-accent">
-          Sign in with GitHub<Icon name="tabler:brand-github" size="24" />
-        </button>
+        <AuthButton />
       </div>
     </div>
   </div>
