@@ -51,6 +51,7 @@ export default antfu(
         ignore: [
           "README.md",
           "pnpm-workspace.yaml",
+          "auth-schema.ts",
         ],
       }],
     },

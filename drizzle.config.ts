@@ -4,7 +4,7 @@ import { env } from "./server/lib/env";
 
 export default defineConfig({
   out: "./server/database/migrations",
-  schema: "./server/database/schema.ts",
+  schema: ["./server/database/schema.ts", "./server/database/auth-schema.ts"],
   dialect: "postgresql",
   dbCredentials: {
     url: env.NUXT_DB_URL,
