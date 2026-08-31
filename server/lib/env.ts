@@ -4,6 +4,8 @@ import tryParseEnv from "./tryParseEnv";
 
 const envSchema = z.object({
   NODE_ENV: z.string(),
+  NUXT_DB_URL: z.string(),
+
 });
 
 export type envSchema = z.infer<typeof envSchema>;

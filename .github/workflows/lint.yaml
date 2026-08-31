@@ -8,7 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      NUXT_DB_URL: postgresql://postgres:postgres@localhost:5432/travel_log
     steps:
       - uses: actions/checkout@v6
 
@@ -16,11 +17,17 @@ jobs:
         uses: pnpm/setup@c9883cc79df532ad1a7b81bf9ab944ceb090d65c
         with:
           version: 11.10.0
-          runtime: node@24.20.0
+          runtime: node@24.15.0
           cache: true
+          install: false
+
+      - name: Show versions
+        run: |
+          node --version
+          pnpm --version
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --reporter=append-only
 
       - name: Lint
         run: pnpm lint
