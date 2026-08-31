@@ -18,9 +18,15 @@ jobs:
           version: 11.10.0
           runtime: node@24.15.0
           cache: true
+          install: false
+
+      - name: Show versions
+        run: |
+          node --version
+          pnpm --version
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --reporter=append-only
 
       - name: Lint
         run: pnpm lint
