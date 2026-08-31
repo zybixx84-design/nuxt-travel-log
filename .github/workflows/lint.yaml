@@ -8,7 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      NUXT_DB_URL: postgresql://postgres:postgres@localhost:5432/travel_log
     steps:
       - uses: actions/checkout@v6
 
