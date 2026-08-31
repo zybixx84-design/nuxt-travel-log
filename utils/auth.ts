@@ -3,6 +3,7 @@ import { betterAuth } from "better-auth";
 
 import db from "../server/database";
 import * as schema from "../server/database/auth-schema";
+import { env } from "../server/lib/env";
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -12,7 +13,14 @@ export const auth = betterAuth({
 
   advanced: {
     database: {
-      generateId: false,
+      generateId: "serial",
+    },
+  },
+
+  socialProviders: {
+    github: {
+      clientId: env.GITHUB_CLIENT_ID,
+      clientSecret: env.GITHUB_CLIENT_SECRET,
     },
   },
 });
